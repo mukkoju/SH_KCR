@@ -915,13 +915,13 @@ ul#socialicons li:focus a, ul.socialicons li:focus a {
 }
 
 ul.list-items{
-	margin:0 0 40px 0;
+	margin:0 0 8px 0;
 	padding:0;
 	color:#a0a1a6;
 }
 ul.list-items li {
 	list-style: none;
-	line-height: 1.2;
+	line-height: 2;
 }
 ul.list-items .list-label{
 	float: left;
@@ -929,6 +929,12 @@ ul.list-items .list-label{
 }
 ul.list-items .list-des{
 	margin-left: 120px;
+}
+
+hr{
+	margin:10px 0;
+	border:0;
+	border-top:1px solid #eee;
 }
 
 /* Team members
