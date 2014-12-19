@@ -916,6 +916,7 @@ display: table-cell;
 vertical-align: middle;
 width: 50%;
 text-align: left;
+color:#fff;
 }
 .timeline-content-wrapper {
     position: absolute;
