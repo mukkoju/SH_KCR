@@ -1724,9 +1724,16 @@ form#contact-form{
 }
 .vertical-portfolio .portfolio-item:nth-child(odd) .item-image{
 	left:33.33%;
+	margin-top:32px;
 }
+
+.vertical-portfolio .portfolio-item:nth-child(even) .item-image{
+	margin-top:32px;
+	right:2.66%;
+}
+
 .vertical-portfolio .item-info .title{
-	margin:50px 0 12px 0;
+	margin:0 0 12px 0;
 	padding-bottom: 30px;
 	font-size: 40px;
 	border-bottom: 1px solid #0e0f16;
