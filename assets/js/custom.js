@@ -1570,44 +1570,6 @@ var imageFill={
     });
   }
 }
-/* google map
-----------------------------------------------*/
-var $gmap = $("#gmap"); 
-$gmap.gmap3({
-  map: {
-      options: {
-          maxZoom:15,
-          streetViewControl: false,
-          mapTypeControl: false,
-      }
-  },
-  styledmaptype: {
-      id: "mystyle",
-      options: {
-          name: "Style 1"
-      },
-      styles: [
-          {
-              featureType: "all",
-              stylers: [
-                  {"saturation": -100}, {"gamma": 0.9}
-              ]
-          }
-      ]
-  },
-  overlay:{
-    //Edit following line and enter your own address
-    address: "Footscray VIC 3011 Australia",
-    options:{
-      content: '<div id="map-marker"><i class="fa fa-map-marker"></i></div>',
-      offset:{
-        y:-65,
-        x:-20
-      }
-    }
-  }},"autofit");
-$gmap.gmap3('get').setMapTypeId("mystyle");
-
 
 /* home slider for quotes
 ----------------------------------------------*/
