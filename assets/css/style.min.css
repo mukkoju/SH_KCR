@@ -902,6 +902,7 @@ body {
     -moz-transition: all .4s linear;
     -o-transition: all .4s linear;
     transition: all .4s linear;
+    color:#fff;
 }
 .timeline-content .feature-illustration {
 display: table-cell;
