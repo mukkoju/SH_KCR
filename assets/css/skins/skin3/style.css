@@ -23,9 +23,6 @@
 #taskbar{
 	background-color: #1e1f1a;
 }
-#menu-trigger{
-	background: url('menu-trigger.png');
-}
 ul#socialicons li a, ul.socialicons li a, #audioplayback a{
 	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPGc+DQogIDx0aXRsZT5MYXllciAxPC90aXRsZT4NCiAgPHBhdGggc3Ryb2tlPSIjZGM5NzFmIiB0cmFuc2Zvcm09InJvdGF0ZSg5MCAxMi4zNzQ5IDEzLjYyNSkiIGlkPSJzdmdfMyIgZD0ibS0xLjAwMDAwNSwxMy42MjUwMTNsNS43MzIyODcsLTExLjg3NTAxNmwxNS4yODU1MzcsMGw1LjczMTkxMywxMS44NzUwMTZsLTUuNzMxOTEzLDExLjg3NTAxN2wtMTUuMjg1NTM3LDBsLTUuNzMyMjg3LC0xMS44NzUwMTd6IiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNkYzk3MWYiLz4NCiA8L2c+DQo8L3N2Zz4=) no-repeat;
 }
