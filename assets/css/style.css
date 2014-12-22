@@ -2577,68 +2577,14 @@ ul.featured-hex li .hex-des a:hover{
 /* Gallery Page */
 .glry #intro {
     width : 30%;
-    height : 100%;
+    min-height : 100%;
     float: left;
 }
 .glry #gallery {
     background : #454545;
     width : 70%;
-    height : 100%;
+    min-height : 100%;
     float: left;
-}
-#album .alb-dmnd {
-    width : 5px;
-    height : 5px;
-    position: absolute;
-    left : 240px;
-    top : 240px;
-    cursor: pointer;
-    opacity: 0;
-    filter : alpha(opacity=0);
-}
-#album .alb-dmnd .img-dmnd {
-    width : 155px;
-    height : 155px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    overflow: hidden;
-    position: absolute;
-    top : 0;
-    left : 0;
-    transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    transition : width .25s;
-    -webkit-transition : width .25s;
-    -moz-transition : width .25s;
-}
-#album .alb-dmnd .img-dmnd img {
-    width: 225px;
-    height: 225px;
-    margin-left: -35px;
-    margin-top: -35px;
-    transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform-origin:50% 50%;
-    -ms-transform-origin:50% 50%; /* IE 9 */
-    -webkit-transform-origin:50% 50%; /* Safari and Chrome */
-    transition: width 0.25s;
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
-}
-#album .alb-dmnd .img-dmnd:hover {
-    width: 180px;
-    height: 180px;
-    margin-left: -15px; margin-top: -15px;
-    z-index: 100;
-    transition: width 0.25s;
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
 }
 
 @media (max-width : 767px) {
