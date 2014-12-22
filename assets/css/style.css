@@ -2417,6 +2417,14 @@ ul.featured-hex li .hex-des a:hover{
     width : 100px;
     height : 100px;
 }
+#top-mnu .diamond img {
+    width : 125px;
+    position: absolute;
+    top : -19px;
+    left : -19px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
 #top-mnu .diamond {
     width : 144px;
     height : 144px;
@@ -2498,6 +2506,19 @@ ul.featured-hex li .hex-des a:hover{
 }
 #top-mnu .diamond:hover .txt {
     color : #FFF;
+}
+#main-mnu {
+    position: fixed;
+    top : 16px;
+    right : 16px;
+    transition : all .15s ease-out;
+    -webkit-transition : all .15s ease-out;
+    -moz-transition : all .15s ease-out;
+}
+#main-mnu:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
 }
 #ad-mnu {
     position: fixed;
