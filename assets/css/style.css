@@ -2439,17 +2439,21 @@ z-index:1;
     position: absolute;
     top : 0;
 }
-#top-mnu .diamond:nth-child(2) {
+#top-mnu.open .diamond:nth-child(2) {
     top : -112px;
+    transition-delay: 30ms;
 }
-#top-mnu .diamond:nth-child(3) {
+#top-mnu.open .diamond:nth-child(3) {
     left : -112px;
+    transition-delay: 60ms;
 }
-#top-mnu .diamond:nth-child(4) {
+#top-mnu.open .diamond:nth-child(4) {
     top : 112px;
+    transition-delay: 90ms;
 }
-#top-mnu .diamond:nth-child(5) {
+#top-mnu.open .diamond:nth-child(5) {
     left : 112px;
+    transition-delay: 120ms;
 }
 #top-mnu .out-dmnd {
     display: inline-block;
