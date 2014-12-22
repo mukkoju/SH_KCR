@@ -1617,4 +1617,7 @@ $(document).ready(function () {
   $('#shw-top-mnu').on('click', function(){
     $('#ad-mnu').removeClass('in').siblings('#top-mnu').addClass('in');
   });
+  $(window).load(function(){
+    $('#top-mnu').addClass('open').find('.diamond').not(':first').addClass('in');
+  });
 });
