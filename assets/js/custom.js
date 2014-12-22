@@ -136,93 +136,6 @@ var initRequired = {
   }
 }
 
-/*PreLoader 
- ----------------------------------------------*/
-var prl, preloader = {
-  settings: {
-    preloader: $('#preloader'),
-    textLoad: $("#text-load"),
-    totalImages: $('img')
-  },
-  init: function () {
-    prl = this.settings;
-    this.listeners();
-    this.triggers();
-  },
-  //trigger a custom event when we are ready to go 
-  triggers: function () {
-
-    var self = this,
-            loadedImagesNum = 0,
-            totalImagesNum = prl.totalImages.length,
-            overlay = prl.preloader.find('#load-overlay'),
-            percentage;
-
-    var imgLoad = imagesLoaded($('body'));
-
-    imgLoad.on('progress', function () {
-      loadedImagesNum = loadedImagesNum + 1;
-      percentage = (1 - (loadedImagesNum / totalImagesNum)) * 100 + '%';
-      TweenMax.to(overlay, 0.1, {width: percentage});
-    });
-
-    imgLoad.on('always', function (instance) {
-      $('body').trigger('readytogo');
-    });
-
-    //Fallback in case something went wrong
-    $(window).load(function () {
-      TweenMax.to(overlay, 0.5, {width: 0, onComplete: function () {
-          $('body').trigger('readytogo');
-        }});
-    });
-  },
-  //listen to custom events
-  listeners: function () {
-    var self = this,
-            $body = $('body');
-
-    $body.on('hideloader', function () {
-
-      //are you a first commer?
-      if ($.cookie("returner") || !enableInstruction) {//No?
-        self.hideLoader();
-      } else { //Yes? then you should pay attention
-        $.cookie("returner", 1, {expires: 1});
-        self.showGuids();
-      }
-
-    });
-
-    $body.one('readytogo', function () {
-      $body.trigger('hideloader');
-    });
-
-    $('a.startbtn').on('click', function () {
-      self.hideLoader();
-    });
-
-  },
-  showGuids: function () {
-    (new TimelineLite())
-            .to(prl.textLoad, 1, {top: "-=60px", scaleX: 0.8, scaleY: 0.8})
-            .to($("#userguid"), 1, {top: "60%", autoAlpha: 1}, "-=1");
-  },
-  // this is a custom animation effect, this can be whatever you like
-  // just make sure you hide(remove) the loader elements
-  hideLoader: function () {
-    (new TimelineLite())
-            .to(prl.preloader, 1.5, {height: 0, ease: Power4.easeInOut})
-            .to($('#text-load,#userguid'), 1.5, {opacity: 0, ease: Power4.easeInOut, onComplete: function () {
-                $('#text-load,#userguid').remove();
-              }}, '-=1.5')
-            .to($('#hello-inner'), 1, {left: "25%", ease: Power4.easeOut}, '-=1')
-            .from($('#hello-contents'), 1.5, {left: '300px', autoAlpha: 0, ease: Power4.easeOut}, '-=0.5')
-            .from($('#taskbar'), 1.5, {scaleX: 2, bottom: '-100px', opacity: 0, ease: Power4.easeInOut, onComplete: function () {
-                $("#menu-trigger a").trigger("mouseenter");
-              }}, '-=1.5');
-  }
-}
 
 /* page slider
  ----------------------------------------------*/
@@ -1695,6 +1608,13 @@ function checkSizeChange() {
     checkSizeChange();
   }, 200);
 }
-
-
+$(document).ready(function () {
   
+  $('#shw-ad-mnu').on('click', function () {
+    $('#ad-mnu').addClass('in').siblings('#top-mnu').removeClass('in');
+  });
+  
+  $('#shw-top-mnu').on('click', function(){
+    $('#ad-mnu').removeClass('in').siblings('#top-mnu').addClass('in');
+  });
+});
