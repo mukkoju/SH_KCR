@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   setTimeout(function(){
     $('#top-mnu').addClass('open').find('.diamond').not(':first').addClass('in');
-  }, 1000);
+  }, 2500);
 
   /* Gallery */
   $('.demo').on('click', '.diamond-box-wrap', function () {
