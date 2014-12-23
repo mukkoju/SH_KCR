@@ -53,9 +53,9 @@ $(document).ready(function () {
     $('#ad-mnu').addClass('in');
   });
 
-  $(window).load(function () {
+  setTimeout(function(){
     $('#top-mnu').addClass('open').find('.diamond').not(':first').addClass('in');
-  });
+  }, 1000);
 
   /* Gallery */
   $('.demo').on('click', '.diamond-box-wrap', function () {
