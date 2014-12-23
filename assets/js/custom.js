@@ -1604,12 +1604,69 @@ $(document).ready(function () {
   $(window).load(function () {
     $('#top-mnu').addClass('open').find('.diamond').not(':first').addClass('in');
   });
-
-  if ($('#gallery').length)
+  
+  /* Gallery */
+  $('.demo').on('click', '.diamond-box-wrap', function(){
+    $(this).addClass('active');
+    var img = new Image();
+    img.src = $(this).find('img').attr('src').replace('/thumb','/large');
+    $('#prw').addClass('open').find('section .img').html(img);
+    scaleImages();
+  });
+  
+  $('#prw').on('click', 'a', function (e) {
+    e.preventDefault();
+    $(this).parent().removeClass('open');
+  });
+  
+  $('#prw').on('click','.nxt, .prv', function(){
+    var imgs = $('#gallery .demo').find('.diamond-box-wrap');
+    var trgt = $('#gallery .demo').find('.diamond-box-wrap.active');
+    var indx = $(this).hasClass('nxt') ? imgs.index(trgt)+1 : imgs.index(trgt)-1;
+    if(($(this).hasClass('nxt') ? imgs.length > indx : indx >= 0))
+    {
+      var img = new Image();
+      img.src = $(imgs[indx]).find('img').attr('src').replace('/thumb','/large');
+      $('#prw section').find('.img').html(img);
+      setTimeout(function(){scaleImages();},0);
+      trgt.removeClass('active');
+      $('#gallery .demo').find('.diamond-box-wrap:eq('+indx+')').addClass('active');
+    }
+  });
+  
+  function scaleImages()
   {
-    var lft = 0, top = 0, row = 0;
-    $('#gallery #album').find('.alb-dmnd').each(function(i,e){
-        $(this).css({'left' : (230*i)+'px', 'top' : (230*(Math.floor(i/3)))+'px'});
+    var par = $('#prw section').find('.img');
+    var img = par.find('img'), div_height = par.outerHeight(),
+            div_width = par.outerWidth(), img_width = img[0].naturalWidth;
+    var img_height = img[0].naturalHeight;
+    var max_side = Math.max(img_width, img_height);
+    var scale = (max_side == img_height) ? img_height / div_height : img_width / div_width;
+    var new_width = 0;
+    var new_height = 0;
+    var top = 0;
+    var left = 0;
+    if (max_side == img_height)
+    {
+      new_width = img_width / scale;
+      new_height = img_height / scale;
+      top = 0;
+      left = Math.round((div_width - new_width) / 2);
+    }
+    else
+    {
+      new_height = img_height / scale;
+      new_width = img_width / scale;
+      top = Math.round((div_height - new_height) / 2);
+      left = 0;
+    }
+    img.css({
+      'width': new_width,
+      'height': new_height,
+      'top': top,
+      'left': left
     });
+    img.addClass('in');
   }
+  
 });
