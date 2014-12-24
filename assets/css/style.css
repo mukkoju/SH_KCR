@@ -2698,3 +2698,67 @@ ul.featured-hex li .hex-des a:hover{
     font-size: 1.4285em;
     font-weight: 300;
 }
+footer {
+    position: absolute;
+    left : 0;
+    width : 100%;
+    bottom: 0;
+    z-index: 1000;
+    min-height: 48px;
+    background : rgba(0,0,0,.1);
+}
+footer:hover {
+    background : rgba(0,0,0,.3);
+}
+
+footer .scl a {
+    float : left;
+    line-height: 32px;
+    width : 32px;
+    position: relative;
+    text-align: center;
+    margin : 8px 10px 0;
+    text-decoration: none;
+}
+footer .scl a i {
+    color : #FFF;
+    font-size : 1.285em;
+    position: relative;
+    z-index: 100;
+    vertical-align: middle;
+}
+footer .scl a .bg {
+    width : 100%;
+    height : 100%;
+    position: absolute;
+    top : 0;
+    left : 0;
+    background : #000;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+footer .scl a:nth-child(1) .bg {
+    background : #3b5998;
+}
+footer .scl a:nth-child(2) .bg {
+    background : #00ACEE;
+}
+footer .scl a:nth-child(3) .bg {
+    background : #DE4B39;
+}
+footer .scl a:hover .bg {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+}
+footer .swtch {
+    line-height: 48px;
+    color : #FFF;
+    float: right;
+}
+footer .swtch a {
+    color : #FFF;
+    font-size: 1.142em;
+    padding : 0 8px;
+}
