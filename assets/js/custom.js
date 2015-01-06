@@ -33,8 +33,8 @@ var kbs, kenburn = {
 };
 
 $(document).ready(function () {
-
-  $('#shw-ad-mnu').on('click', function (e) {
+// This event changed ID to CLASS 
+  $('.shw-ad-mnu').on('click', function (e) {
     e.preventDefault();
     $('#ad-mnu').addClass('in').siblings('#top-mnu').removeClass('in');
   });
