@@ -2762,3 +2762,13 @@ footer .swtch a {
     font-size: 1.142em;
     padding : 0 8px;
 }
+@media (max-width : 767px) {
+    #ad-mnu {
+        width : 100% !important;
+    }
+    #ad-mnu section {
+        transform: scale(.75);
+        top : 30%;
+    }
+    
+}

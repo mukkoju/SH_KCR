@@ -171,6 +171,24 @@
     }
     #ad-mnu section {
         transform: scale(.75);
-        top : 5%;
+        top : 30%;
     }
+    .glry #intro{
+        width: 100% !important;
+        min-height: 18% !important;
+    }
+    #gallery{
+        width: 100% !important;
+    }
+    .demo{
+        margin: 0 !important;
+    }
+    #intro p{
+        display: none !important;
+    }
+    #intro h1{
+        width: 66% !important;
+    }
+    
+    
 }

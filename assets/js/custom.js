@@ -42,7 +42,7 @@ $(document).ready(function () {
   $('#shw-top-mnu').on('click', function () {
     $('#ad-mnu').removeClass('in').siblings('#top-mnu').addClass('in');
   });
-
+  
   $('#ad-mnu .diamond').hover(function (e) {
     if (e.type == 'mouseenter')
       $('#ad-mnu .tag').text($(this).data('tag') != undefined ? $(this).data('tag') : '');
@@ -58,6 +58,15 @@ $(document).ready(function () {
   }, 1000);
 
   /* Gallery */
+  if(window.location.pathname == '/gallery.html'){
+  $(document).mouseup(function(e){
+      var mnu = $('#ad-mnu');
+      if(e.target.id != mnu.attr('id')){
+          $('#ad-mnu').removeClass('in');
+      }
+  });
+  }
+  
   $('.demo').on('click', '.diamond-box-wrap', function () {
     $(this).addClass('active');
     var img = new Image();
