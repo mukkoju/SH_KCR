@@ -189,6 +189,8 @@
     #intro h1{
         width: 66% !important;
     }
-    
+    #main-mnu{
+        position: absolute !important;
+    }
     
 }

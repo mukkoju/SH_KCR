@@ -36,7 +36,8 @@ $(document).ready(function () {
 // This event changed ID to CLASS 
   $('.shw-ad-mnu').on('click', function (e) {
     e.preventDefault();
-    $('#ad-mnu').addClass('in').siblings('#top-mnu').removeClass('in');
+      $('#ad-mnu').addClass('in').siblings('#top-mnu').removeClass('in');
+      $('.men-title').html($(this).data('title'));
   });
 
   $('#shw-top-mnu').on('click', function () {

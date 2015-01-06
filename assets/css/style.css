@@ -782,7 +782,7 @@ ul#socialicons li:focus a, ul.socialicons li:focus a {
     left: 0;
     height: 100%;
     width:100%;
-    background: url('../img/overlay-pattern2.png') repeat;
+    /*background: url('../img/overlay-pattern2.png') repeat;*/
     opacity: 0.5;
     z-index: 2;
 }
@@ -2771,4 +2771,12 @@ footer .swtch a {
         top : 30%;
     }
     
+}
+
+.men-title{
+color: white;
+text-align: center;
+font-weight: bolder;
+font-family: 'Exo 2', Helvetica, Arial, sans-serif;
+font-weight: 600;
 }
