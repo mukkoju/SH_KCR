@@ -16,7 +16,7 @@ var kbs, kenburn = {
       images: [
         "assets/img/home/22.jpg",
         "assets/img/home/21.jpg",
-        "assets/img/home/23.jpg",
+//        "assets/img/home/23.jpg",
         "assets/img/home/27.jpg",
         "assets/img/home/29.jpg"
       ],
